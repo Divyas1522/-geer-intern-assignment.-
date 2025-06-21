@@ -62,7 +62,7 @@ Returns a single product by ID.
 ✅ DELETE /api/products/:id
 Deletes a product by ID. Triggered from the delete button in UI.
 
-----
+---
 
 ##📌 Notes
 Data is not persisted — it resets when the server restarts.
