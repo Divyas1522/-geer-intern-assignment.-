@@ -1,40 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# 🛒 Geer E-commerce Intern Assignment – Frontend (Next.js + TailwindCSS)
 
-## Getting Started
+This is a simple **E-commerce Frontend App** built with **Next.js** and **TailwindCSS** as part of the **Geer.in internship assignment**. It features product listing, adding new products, viewing product details, and deleting products — all using in-memory data without a database.
 
-First, run the development server:
+---
+
+## 🔧 Tech Stack
+
+- ✅ **Next.js** – React framework for SSR and API routes  
+- 🎨 **Tailwind CSS** – Utility-first modern styling  
+- 🧠 **React Hooks** – For state and side effects  
+- 📁 **In-memory data** – No database (for prototype/demo purposes)
+
+---
+
+## ✨ Features
+
+- 📦 View all products in a responsive grid  
+- 🔍 Search products by name  
+- ➕ Add new product (Name, Price, Image URL)  
+- 👁️ View individual product details  
+- ❌ Delete a product (no page refresh required)  
+- 🎨 Fully responsive and styled using TailwindCSS  
+- ⚙️ API Routes (GET, POST, DELETE)
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
 
 ```bash
+git clone https://github.com/Divyas1522/-geer-intern-assignment.-.git
+cd frontend
+
+
+2. Install Dependencies
+npm install
+
+3. Run the Development Server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit your site at: http://localhost:3000
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+---
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+✅ GET /api/products
+Returns all products.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+✅ POST /api/products
+Adds a new product. Example request body:
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+{
+  "name": "Shoes",
+  "price": 999,
+  "image": "/shoes.jpg"
+}
 
-## Learn More
+✅ GET /api/products/:id
+Returns a single product by ID.
 
-To learn more about Next.js, take a look at the following resources:
+✅ DELETE /api/products/:id
+Deletes a product by ID. Triggered from the delete button in UI.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+##📌 Notes
+Data is not persisted — it resets when the server restarts.
 
-## Deploy on Vercel
+Ideal for frontend + API demonstration without database setup.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+
+
+
